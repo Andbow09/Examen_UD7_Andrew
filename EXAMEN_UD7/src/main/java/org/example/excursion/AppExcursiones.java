@@ -18,7 +18,10 @@ public class AppExcursiones {
         System.out.println("Después de eliminar a los menores de 21 años: ");
         excursion.verAsistentes();
 
-        System.out.println("Importe a ingresar para la actividad " + excursion.getNombre_actividad() + " en " + excursion.getLocalidad() + ": " + excursion.calcularImporteIngreso() + "€.");
+        System.out.println("Importe a ingresar para la actividad " +
+                excursion.getNombre_actividad() + " en " +
+                excursion.getLocalidad() + ": " +
+                excursion.calcularImporteIngreso() + "€.");
 
     }
 }
