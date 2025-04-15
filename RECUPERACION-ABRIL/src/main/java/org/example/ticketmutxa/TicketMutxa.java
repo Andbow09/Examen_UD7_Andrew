@@ -7,7 +7,7 @@ public class TicketMutxa {
     static Scanner scanner = new Scanner(System.in);
 
     static Usuario comprador;
-    static Set<Evento> listaEventos = new HashSet<>();
+    static Set<Evento> listaEventos = new TreeSet<>();
     static Set<Usuario> usuariosRegistrados = new HashSet<>();
 
     static void insertarEvento(String nombre, LocalDate fecha, double precio, String tipo) {
@@ -64,6 +64,10 @@ public class TicketMutxa {
     }
 
     public static Evento getEvento(int posicion) {
-        return listaEventos.
+        Iterator<Evento> iterator = listaEventos.iterator();
+        while (iterator.hasNext()) {
+            Evento posicion_actual = iterator.nextIndex();
+        }
+
     }
 }
