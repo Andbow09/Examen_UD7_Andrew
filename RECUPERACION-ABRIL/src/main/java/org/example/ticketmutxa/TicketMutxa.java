@@ -56,6 +56,7 @@ public class TicketMutxa {
 
         System.out.println("----------------");
         int opcion = scanner.nextInt();
+        getEvento(opcion);
     }
 
     public static Set<Usuario> getUsuariosRegistrados() {
@@ -63,6 +64,6 @@ public class TicketMutxa {
     }
 
     public static Evento getEvento(int posicion) {
-        return listaEventos
+        return listaEventos.
     }
 }
