@@ -48,4 +48,33 @@ public class Usuario implements Acciones{
         }
         return false;
     }
+
+    public void anyadirAlCarrito(Evento evento, int cantidad) {
+        carritoCompra.put(evento, cantidad);
+    }
+
+    public boolean setCarritoCompra(Evento evento, int cantidad) {
+        int cantidad_anterior = 0;
+
+        for (Map.Entry<Evento, Integer> entry : carritoCompra.entrySet()) {
+            cantidad_anterior = entry.getValue();
+        }
+
+        if ((cantidad_anterior + cantidad) > 7) {
+            System.out.println("No puedes realizar la operación (Entradas: min=0 y máx=7)");
+            return false;
+        } else {
+            carritoCompra.put(evento,cantidad_anterior + cantidad);
+        }
+
+        return true;
+    }
+
+    public void verCarrito() {
+        for (Map.Entry<Evento, Integer> entry : carritoCompra.entrySet()) {
+            System.out.println("Carrito: " + entry.getValue() + " entradas para " + entry.getKey().getNombre() + ".");
+            System.out.println("\t\t Importe total: " + (entry.getKey().getPrecio() * entry.getValue()) + "€.");
+            System.out.println("\t\t Gastos de gestión: por calcular");
+        }
+    }
 }
